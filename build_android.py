@@ -4,7 +4,7 @@ import sys
 
 def package_apk():
     outpath = "./../publish/" + LOCALTIME + "/"
-    arg = os.path.abspath('.') + os.sep + "cocos2d-console/bin/cocos compile"
+    arg = os.getenv('COCOS_FRAMEWORKS') + os.sep + "tools/cocos2d-console/bin/cocos compile"
     arg += " -s ./../"
     arg += " -p android"
     arg += " -m release"
